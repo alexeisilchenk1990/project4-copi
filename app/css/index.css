@@ -1,0 +1,509 @@
+/*
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.header {
+  width: 100%;
+  height: 65px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #ffffff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 0 5px #888AA1;
+          box-shadow: 0 0 5px #888AA1;
+  overflow: hidden;
+  z-index: 100; }
+
+a {
+  text-decoration: none;
+  display: block; }
+
+.header_logo {
+  width: 202px;
+  height: 73px;
+  background: url("/assets/img/header/logo.png") no-repeat;
+  -webkit-background-size: 202px 73px;
+          background-size: 202px 73px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  top: -3px;
+  left: -6px;
+  cursor: pointer; }
+
+.header_naw {
+  width: 710px;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.header_naw--item-exile {
+  font: 15px/28px 'Abrade Book*', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  color: #888AA1; }
+
+.header_naw--item-ex {
+  color: #67C3EB; }
+
+.header_wrap {
+  width: 190px;
+  height: 100%; }
+
+.header_wrap:after {
+  content: '';
+  position: absolute;
+  width: 31px;
+  height: 31px;
+  background: url("/assets/img/header/phone.png") no-repeat;
+  -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+  top: 15px;
+  right: 19px;
+  cursor: pointer; }
+
+.header_wrap--phone {
+  font: 15px/28px 'Abrade Book*', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  color: #888AA1;
+  position: relative;
+  top: 7px;
+  cursor: pointer; }
+
+.header_wrap--office {
+  font: 15px/28px 'Abrade Book*', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  color: #888AA1;
+  position: relative;
+  bottom: 3px;
+  left: 30px; }
+
+.footer {
+  width: 100%;
+  height: 65px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+  border-top: 1px solid #888ba2;
+  z-index: 100;
+  background: #ffffff; }
+
+.footer_wrapper {
+  width: 360px;
+  height: 100%;
+  margin-left: 23px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
+.footer_wrapper--logo {
+  width: 190px;
+  height: 100%;
+  background: url("/assets/img/footer/logo_1.png") 50% no-repeat;
+  -webkit-background-size: 190px 30px;
+          background-size: 190px 30px; }
+
+.footer_wrapper--developer {
+  font: 12px/15px 'Abrade Book*', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  color: #888ba2;
+  position: relative;
+  left: 56px;
+  top: 18px;
+  width: 133px; }
+
+.footer_wrapper--developer:before {
+  content: '';
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  background: url("/assets/img/footer/topfloat.png") no-repeat;
+  -webkit-background-size: 20px 20px;
+          background-size: 20px 20px;
+  top: 6px;
+  left: -33px; }
+
+.footer_wrapper--developer-text {
+  display: block;
+  width: 49px;
+  height: 13px;
+  border-bottom: 1px solid #888ba2;
+  font: 12px/15px 'Abrade Book*', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  color: #888ba2; }
+
+.footer_exile {
+  display: block;
+  width: 280px;
+  height: 100%;
+  font: 12px/15px 'Abrade Book*', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  color: #888ba2;
+  padding: 26px 0 0 37px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative; }
+
+.footer_exile:before {
+  content: '';
+  position: absolute;
+  width: 31px;
+  height: 31px;
+  background: url("/assets/img/footer/reproduction.png") no-repeat;
+  top: 18px;
+  left: -5px; }
+
+.footer_wrap {
+  widows: 225px;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
+.footer_wrap--cnt {
+  font: 12px/15px 'Abrade Book*', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  color: #888ba2;
+  width: 91px;
+  position: relative;
+  top: 24px; }
+
+.footer_wrap--instagram {
+  width: 22px;
+  height: 22px;
+  background: url("/assets/img/footer/instagram.png") no-repeat;
+  -webkit-background-size: 21px 21px;
+          background-size: 21px 21px;
+  margin: 20px 8px 0 14px; }
+
+.footer_wrap--vk {
+  width: 26px;
+  height: 16px;
+  background: url("/assets/img/footer/vk.png") no-repeat;
+  -webkit-background-size: 25px 15px;
+          background-size: 25px 15px;
+  margin: 23px 12px 0 0; }
+
+.footer_wrap--facebook {
+  width: 23px;
+  height: 23px;
+  background: url("/assets/img/footer/facebook.png") no-repeat;
+  -webkit-background-size: 22px 22px;
+          background-size: 22px 22px;
+  margin: 20px 27px 0 0; }
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.wrapper_bgr {
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover; }
+
+.wrapper_cnt {
+  width: 600px;
+  padding: 136px 0 0 50px; }
+
+.wrapper_cnt--button {
+  width: 101px;
+  height: 40px;
+  position: relative;
+  border: 1px solid #888AA1;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+  font: 15px/14px 'Abrade Book*', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  color: #888AA1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 33px;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s; }
+
+.wrapper_cnt--button:before {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 18px;
+  background: url("/assets/img/main/planegray.svg") no-repeat;
+  -webkit-background-size: 23px 17px;
+          background-size: 23px 17px;
+  left: 28px;
+  top: 12px;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s; }
+
+.wrapper_cnt--button:hover {
+  border: 1px solid #ffffff;
+  background: #83D6F4;
+  color: #ffffff; }
+
+.wrapper_cnt--button:hover:before {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 18px;
+  background: url("/assets/img/main/planewhite.svg") no-repeat;
+  -webkit-background-size: 23px 17px;
+          background-size: 23px 17px;
+  left: 25px;
+  top: 12px; }
+
+.wrapper_cnt--heading {
+  position: relative;
+  margin: 35px 0 50px 0;
+  width: 600px;
+  height: 182px;
+  font: 50px/60px 'LeksaSans*', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  color: #2e2e2e; }
+
+.wrapper_cnt--text {
+  width: 640px;
+  font: 15px/23px 'Abrade Book*', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  color: #888AA1;
+  margin-bottom: 37px; }
+
+.wrapper_cnt--exile {
+  width: 162px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 70px; }
+
+.wrapper_cnt--exile-vk {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font: 15px/23px 'Abrade Book*', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  color: #888AA1;
+  width: 53px;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative; }
+
+.wrapper_cnt--exile-vk:before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 15px;
+  background: url("/assets/img/main/vk_1.svg") no-repeat;
+  -webkit-background-size: 24px 14px;
+          background-size: 24px 14px;
+  top: 5px;
+  left: 0; }
+
+.wrapper_cnt--exile-facebook {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font: 15px/23px 'Abrade Book*', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  color: #888AA1;
+  width: 45px;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative; }
+
+.wrapper_cnt--exile-facebook:before {
+  content: '';
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  background: url("/assets/img/main/facebook_1.svg") no-repeat;
+  -webkit-background-size: 22px 22px;
+          background-size: 22px 22px;
+  top: 0;
+  left: 0; }
+
+.wrapper_cnt--exile-ok {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font: 15px/23px 'Abrade Book*', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  color: #888AA1;
+  width: 37px;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative; }
+
+.wrapper_cnt--exile-ok:before {
+  content: '';
+  position: absolute;
+  width: 13px;
+  height: 23px;
+  background: url("/assets/img/main/ok.svg") no-repeat;
+  -webkit-background-size: 12px 22px;
+          background-size: 12px 22px;
+  top: 0;
+  left: 0; }
+
+body {
+  width: 100%;
+  height: 100vh; }

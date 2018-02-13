@@ -1,0 +1,161 @@
+@mixin font-smoothing {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    backface-visibility: hidden;
+}
+
+.wrapper{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.wrapper_bgr{
+    width: 50%;
+    object-fit: cover;
+}
+
+.wrapper_cnt{
+    width: 600px;
+    padding: 136px 0 0 50px;
+
+    &--button{
+        width: 101px;
+        height: 40px;
+        position: relative;
+        border: 1px solid #888AA1;
+        border-radius: 20px;
+        font: 15px/14px 'Abrade Book*', sans-serif;
+        @include font-smoothing();
+        color: #888AA1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 33px;
+        transition: 1s;
+
+        &:before{
+            content:'';
+            position: absolute;
+            width: 24px;
+            height: 18px;
+            background: url('/assets/img/main/planegray.svg') no-repeat;
+            background-size: 23px 17px;
+            left: 28px;
+            top: 12px;
+            transition: 1s;
+        }
+
+        &:hover {
+            border: 1px solid #ffffff;
+            background: #83D6F4;
+            color: #ffffff;
+
+            &:before{
+                content:'';
+                position: absolute;
+                width: 24px;
+                height: 18px;
+                background: url('/assets/img/main/planewhite.svg') no-repeat;
+                background-size: 23px 17px;
+                left: 25px;
+                top: 12px;
+            }
+        }
+
+    }
+
+    &--heading{
+            position: relative;
+            margin: 35px 0 50px 0;
+            width: 600px;
+            height: 182px;
+            font: 50px/60px 'LeksaSans*', sans-serif;
+            @include font-smoothing();
+            color: #2e2e2e;
+    }
+
+    &--text{
+        width: 640px;
+        font: 15px/23px 'Abrade Book*', sans-serif;
+        @include font-smoothing();
+        color: #888AA1;
+        margin-bottom: 37px;
+    }
+    
+}
+
+.wrapper_cnt--exile {
+    width: 162px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 70px;
+
+    &-vk{
+        display: flex;
+        font: 15px/23px 'Abrade Book*', sans-serif;
+        @include font-smoothing();
+        color: #888AA1;
+        width: 53px;
+        justify-content: flex-end;
+        position: relative;
+
+        &:before{
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 15px;
+            background: url('/assets/img/main/vk_1.svg') no-repeat;
+            background-size: 24px 14px;
+            top: 5px;
+            left: 0;
+        }
+    }
+
+    &-facebook{
+        display: flex;
+        font: 15px/23px 'Abrade Book*', sans-serif;
+        @include font-smoothing();
+        color: #888AA1;
+        width: 45px;
+        justify-content: flex-end;
+        position: relative;
+
+        &:before{
+            content: '';
+            position: absolute;
+            width: 23px;
+            height: 23px;
+            background: url('/assets/img/main/facebook_1.svg') no-repeat;
+            background-size: 22px 22px;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &-ok{
+        display: flex;
+        font: 15px/23px 'Abrade Book*', sans-serif;
+        @include font-smoothing();
+        color: #888AA1;
+        width: 37px;
+        justify-content: flex-end;
+        position: relative;
+
+        &:before{
+            content: '';
+            position: absolute;
+            width: 13px;
+            height: 23px;
+            background: url('/assets/img/main/ok.svg') no-repeat;
+            background-size: 12px 22px;
+            top: 0;
+            left: 0;
+        }
+    }
+}
